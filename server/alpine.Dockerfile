@@ -19,8 +19,8 @@ RUN	apk update --no-cache && apk upgrade --no-cache \
     && tar -xzf /ts/TeaSpeak.tar.gz -C /ts \
     && rm /ts/TeaSpeak.tar.gz \
     && echo "" > /ts/config/config.yml && ln -sf /ts/config/config.yml /ts/config.yml \
-    && wget -nv -O /usr/local/bin/youtube-dl https://yt-dl.org/downloads/latest/youtube-dl \
-    && chmod a+rx /usr/local/bin/youtube-dl \
+    && wget -nv -O /usr/local/bin/yt-dlp https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp \
+    && chmod a+rx /usr/local/bin/yt-dlp \
     \
     && addgroup -g ${gid} teaspeak \
     && adduser -H -u ${uid} -G teaspeak -D teaspeak \
